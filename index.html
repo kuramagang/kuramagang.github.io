@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Walk your Dragon</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/png" href="0.png">
+        <style>
+            html {
+                cursor: auto;
+            }
+
+            body {
+                font-family: 'Press Start 2P', cursive;
+                margin: 0;
+                padding: 0;
+                font-size: 1.5vh;
+            }
+            #interface {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-flow: column wrap;
+                align-content: stretch;
+                gap: 5vw;
+                margin-top: 5vh;
+            }
+            #eventVisible {
+                opacity: 1;
+                transition: opacity 1s;
+            }
+            #eventHidden {
+                opacity: 0;
+                transition: opacity 1s;
+                user-select: none;
+            }
+            .nes-container {
+                margin-left: 15vw;
+                margin-right: 15vw;
+            }
+            .nes-btn {
+                float: right;
+                cursor: default;
+            }
+
+            #score {
+                color: #000;
+            }
+            #highscore {
+                color: #000;
+                display: none;
+            }
+            #dragonImage {
+                width: 20rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="interface">
+            <div class="nes-container" id="eventVisible">
+                <p id="eventText">Hydro wants to go for a walk.</p>
+                <p id="eventAction" class="nes-btn" href="#" onclick="hydro.startWalking()">Start Walking</p>
+            </div>
+            <img id="dragonImage" src="0.png">
+            <p id="score">0</p>
+            <p id="highscore">0</p>
+        </div>
+        <script src="WalkYourDragon.js"></script>
+    </body>
+</html>
