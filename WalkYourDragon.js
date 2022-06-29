@@ -1,5 +1,5 @@
 //Set variables to be used by game loop
-var FPS = 5, now, then = Date.now(), interval = 1000/FPS, delta;
+var FPS = 10, now, then = Date.now(), interval = 1000/FPS, delta;
 
 //Set variables to be used by game
 var gameSpeed = 1, gameCount = 0, highscore = 0;
